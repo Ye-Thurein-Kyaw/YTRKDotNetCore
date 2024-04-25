@@ -134,7 +134,7 @@ namespace YTRKDotNetCore.ConsoleApp
             connection.Open();
 
             string query = @"DELETE FROM Tbl_Blog 
-      WHERE BlogId = @BlogId";
+            WHERE BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
 

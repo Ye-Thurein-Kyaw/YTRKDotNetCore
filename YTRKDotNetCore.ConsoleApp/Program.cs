@@ -48,6 +48,10 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Create("title", "author", "content");
 //adoDotNetExample.Update(1, "adfad", "sgg", "deeaf");
 //adoDotNetExample.Delete(1);
-adoDotNetExample.Edit(2);
+//adoDotNetExample.Edit(2);
+
+DapperExample dapper = new DapperExample();
+dapper.Run();
+
 
 Console.ReadKey();
