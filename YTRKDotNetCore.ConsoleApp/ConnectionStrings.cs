@@ -14,7 +14,8 @@ namespace YTRKDotNetCore.ConsoleApp
             DataSource = "LAPTOP-1PC0MA3L\\MSSQLSERVER2022",
             InitialCatalog = "DotNetTraningBatch4",
             UserID = "sa",
-            Password = "sa@123"
+            Password = "sa@123",
+            TrustServerCertificate = true, //ဒီတကြောင်းကို မထည့်ဘဲ သုံးရင် EFCore ကိုသုံးတဲ့အချိန် error တက်တယ် 
         };
     }
 }

@@ -50,8 +50,11 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Delete(1);
 //adoDotNetExample.Edit(2);
 
-DapperExample dapper = new DapperExample();
-dapper.Run();
+//DapperExample dapper = new DapperExample();
+//dapper.Run();
+
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.Run();
 
 
 Console.ReadKey();
