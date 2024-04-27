@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YTRKDotNetCore.ConsoleApp.Dtos;
+using YTRKDotNetCore.ConsoleApp.Services;
 
-namespace YTRKDotNetCore.ConsoleApp
+namespace YTRKDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -43,7 +45,7 @@ namespace YTRKDotNetCore.ConsoleApp
         private void Edit(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-           var item =  db.Query<BlogDto>("select * from tbl_blog where blogid = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
+            var item = db.Query<BlogDto>("select * from tbl_blog where blogid = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
 
             if (item == null)
             {
@@ -84,7 +86,7 @@ namespace YTRKDotNetCore.ConsoleApp
 
         }
 
-        private void Update(int  id, string title, string author, string content)
+        private void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {

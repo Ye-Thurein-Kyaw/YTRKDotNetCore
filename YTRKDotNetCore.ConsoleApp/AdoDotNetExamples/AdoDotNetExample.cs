@@ -7,21 +7,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
 
-namespace YTRKDotNetCore.ConsoleApp
+namespace YTRKDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
         private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
             DataSource = "LAPTOP-1PC0MA3L\\MSSQLSERVER2022",
-        InitialCatalog = "DotNetTraningBatch4",
+            InitialCatalog = "DotNetTraningBatch4",
             UserID = "sa",
             Password = "sa@123"
-        }; 
+        };
 
         public void Read()
-        {   
-            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString); 
+        {
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
             Console.WriteLine("Connection Open");
@@ -66,15 +66,15 @@ namespace YTRKDotNetCore.ConsoleApp
                 Console.WriteLine("No data found");
                 return;
             }
-                
+
             DataRow dr = dt.Rows[0];
-            
-                Console.WriteLine("Blog ID => " + dr["BlogId"]);
-                Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
-                Console.WriteLine("Blog Authour => " + dr["BlogAuthor"]);
-                Console.WriteLine("Blog Content => " + dr["BlogContent"]);
-                Console.WriteLine("--------------------------------------");
-            
+
+            Console.WriteLine("Blog ID => " + dr["BlogId"]);
+            Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
+            Console.WriteLine("Blog Authour => " + dr["BlogAuthor"]);
+            Console.WriteLine("Blog Content => " + dr["BlogContent"]);
+            Console.WriteLine("--------------------------------------");
+
         }
 
 
@@ -92,10 +92,10 @@ namespace YTRKDotNetCore.ConsoleApp
            ,@BlogAuthor
            ,@BlogContent)";
             SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@BlogTitle",title);
-            cmd.Parameters.AddWithValue("@BlogAuthor",author);
-            cmd.Parameters.AddWithValue("@BlogContent",content);
-          var result =  cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@BlogTitle", title);
+            cmd.Parameters.AddWithValue("@BlogAuthor", author);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
+            var result = cmd.ExecuteNonQuery();
 
             connection.Close();
 
@@ -103,9 +103,9 @@ namespace YTRKDotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        public void Update(int id, string title, string author, string content) 
+        public void Update(int id, string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection( _sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
             string query = @"UPDATE [dbo].[Tbl_Blog]
@@ -113,7 +113,7 @@ namespace YTRKDotNetCore.ConsoleApp
       ,[BlogAuthor] = @BlogAuthor
       ,[BlogContent] = @BlogContent
  WHERE BlogId = @BlogId";
-            SqlCommand cmd = new SqlCommand(query,connection);
+            SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
@@ -124,8 +124,8 @@ namespace YTRKDotNetCore.ConsoleApp
             connection.Close();
 
             string message = result > 0 ? "Update Success" : "update fail";
-            Console.WriteLine(message) ;
-            
+            Console.WriteLine(message);
+
         }
 
         public void Delete(int id)
