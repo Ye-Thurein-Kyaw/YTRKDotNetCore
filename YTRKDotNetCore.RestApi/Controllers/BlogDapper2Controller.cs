@@ -28,7 +28,7 @@ namespace YTRKDotNetCore.RestApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBlog(int id , BlogModel blog)
+        public IActionResult GetBlog(int id)
         {
             var item = FindById(id);
 

@@ -21,7 +21,7 @@ namespace YTRKDotNetCore.RestApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBlog(int id , BlogModel blog)
+        public IActionResult GetBlog(int id)
         {
             //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             //var item = db.Query<BlogModel>("select * from tbl_blog where blogid = @BlogId", new BlogModel { BlogId = id }).FirstOrDefault();
