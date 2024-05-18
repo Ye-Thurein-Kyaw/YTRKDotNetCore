@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.Shared", "YT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.RestApiWithNLayer", "YTRKDotNetCore.RestApiWithNLayer\YTRKDotNetCore.RestApiWithNLayer.csproj", "{859FD4C7-3CEB-4461-A09F-9778C7553A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.ConsoleAppHttpClient", "YTRKDotNetCore.ConsoleAppHttpClient\YTRKDotNetCore.ConsoleAppHttpClient.csproj", "{8EBFD371-D04F-4AF0-B260-24E6986C6E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.ConsoleAppHttpClient", "YTRKDotNetCore.ConsoleAppHttpClient\YTRKDotNetCore.ConsoleAppHttpClient.csproj", "{8EBFD371-D04F-4AF0-B260-24E6986C6E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.ConsoleAppHttpClientExamples", "YTRKDotNetCore.ConsoleAppHttpClientExamples\YTRKDotNetCore.ConsoleAppHttpClientExamples.csproj", "{26C3FF4E-DE2F-4448-8D45-4BA6737F5BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{8EBFD371-D04F-4AF0-B260-24E6986C6E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EBFD371-D04F-4AF0-B260-24E6986C6E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EBFD371-D04F-4AF0-B260-24E6986C6E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C3FF4E-DE2F-4448-8D45-4BA6737F5BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C3FF4E-DE2F-4448-8D45-4BA6737F5BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C3FF4E-DE2F-4448-8D45-4BA6737F5BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C3FF4E-DE2F-4448-8D45-4BA6737F5BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
