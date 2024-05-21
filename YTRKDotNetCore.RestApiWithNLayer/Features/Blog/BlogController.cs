@@ -86,5 +86,5 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Blog
         }
     }
 
-    
+
 }

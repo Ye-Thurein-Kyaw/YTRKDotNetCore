@@ -8,10 +8,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace YTRKDotNetCore.ConsoleAppHttpClientExamples
 {
-    internal class HttpClientExamples
+    internal class HttpClientExample
     {
 
-      private readonly  HttpClient _client = new HttpClient() { BaseAddress = new Uri("https://localhost:7056") };
+        private readonly HttpClient _client = new HttpClient() { BaseAddress = new Uri("https://localhost:7056") };
         private readonly string _blogEndpoint = "api/blog";
         public async Task RunAsync()
         {
@@ -20,7 +20,7 @@ namespace YTRKDotNetCore.ConsoleAppHttpClientExamples
             //await CreateAsync("title","author","content");
             //await UpdateAsync(2,"title","author","content");
             await PatchAsync(2, "Title patch");
-          await  ReadAsync();
+            await ReadAsync();
         }
 
         private async Task ReadAsync()
@@ -49,12 +49,13 @@ namespace YTRKDotNetCore.ConsoleAppHttpClientExamples
                 string jsonStr = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(jsonStr);
                 BlogModel item = JsonConvert.DeserializeObject<BlogModel>(jsonStr)!;
-                    Console.WriteLine(JsonConvert.SerializeObject(item));
-                    Console.WriteLine($"Title => {item.BlogTitle}");
-                    Console.WriteLine($"Autor => {item.BlogAuthor}");
-                    Console.WriteLine($"BlogContent => {item.BlogContent}");
+                Console.WriteLine(JsonConvert.SerializeObject(item));
+                Console.WriteLine($"Title => {item.BlogTitle}");
+                Console.WriteLine($"Autor => {item.BlogAuthor}");
+                Console.WriteLine($"BlogContent => {item.BlogContent}");
             }
-            else { 
+            else
+            {
                 string message = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(message);
             }
@@ -72,7 +73,7 @@ namespace YTRKDotNetCore.ConsoleAppHttpClientExamples
 
             // to Json
             string blogJson = JsonConvert.SerializeObject(model);
-            HttpContent httpContent = new StringContent(blogJson,Encoding.UTF8, Application.Json);
+            HttpContent httpContent = new StringContent(blogJson, Encoding.UTF8, Application.Json);
             var response = await _client.PostAsync(_blogEndpoint, httpContent);
             if (response.IsSuccessStatusCode)
             {
@@ -110,17 +111,17 @@ namespace YTRKDotNetCore.ConsoleAppHttpClientExamples
         {
             BlogModel model = new BlogModel();
 
-            if(!string.IsNullOrEmpty(title))
-             {
+            if (!string.IsNullOrEmpty(title))
+            {
                 model.BlogTitle = title;
             }
-            if(!string.IsNullOrEmpty(author))
-             {
+            if (!string.IsNullOrEmpty(author))
+            {
                 model.BlogAuthor = author;
             }
-            if(!string.IsNullOrEmpty(content))
-             {
-              model.BlogContent = content;
+            if (!string.IsNullOrEmpty(content))
+            {
+                model.BlogContent = content;
             }
 
             string blogJson = JsonConvert.SerializeObject(model);

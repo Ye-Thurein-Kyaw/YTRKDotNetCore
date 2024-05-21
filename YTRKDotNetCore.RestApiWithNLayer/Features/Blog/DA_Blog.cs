@@ -19,7 +19,7 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Blog
             var lst = _context.Blogs.ToList();
             return lst;
         }
-        
+
         public BlogModel GetBlog(int id)
         {
             var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
@@ -33,10 +33,10 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Blog
             return result;
         }
 
-        public int UpdateBlog(int id, BlogModel requestModel) 
+        public int UpdateBlog(int id, BlogModel requestModel)
         {
             var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
-            if (item == null)return 0;
+            if (item == null) return 0;
 
             item.BlogTitle = requestModel.BlogTitle;
             item.BlogAuthor = requestModel.BlogAuthor;
@@ -44,7 +44,7 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Blog
 
             var result = _context.SaveChanges();
             return result;
-            
+
         }
 
         public int PatchBlog(int id, BlogModel requestModel)
@@ -71,8 +71,8 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Blog
 
         public int DeleteBlog(int id)
         {
-            var item = _context.Blogs.FirstOrDefault(x =>x.BlogId == id);
-            if (item == null)return 0;
+            var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
+            if (item == null) return 0;
 
             _context.Blogs.Remove(item);
             var result = _context.SaveChanges();

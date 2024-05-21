@@ -16,13 +16,9 @@ namespace YTRKDotNetCore.ConsoleApp.EFCoreExamples
 
             //Edit(11);
             //Edit(34);
-
             //Create("EFCore title", "EFCore auth", "EFCore Context");
-
             //Update(18, "EFCore Update", "update efcore auth", "update efore context");
-
             Delete(33);
-
             Read();
         }
 

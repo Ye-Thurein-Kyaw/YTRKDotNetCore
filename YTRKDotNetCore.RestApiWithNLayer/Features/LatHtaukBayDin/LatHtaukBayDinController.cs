@@ -30,7 +30,7 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.LatHtaukBayDin
             var model = await GetDataAsync();
             return Ok(model.numberList);
         }
-        
+
         [HttpGet("{questionNo}/{no}")]
         public async Task<IActionResult> Answer(int questionNo, int no)
         {

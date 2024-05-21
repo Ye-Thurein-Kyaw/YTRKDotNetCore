@@ -19,12 +19,12 @@ namespace YTRKDotNetCore.Shared
             _connectionString = connectionString;
         }
 
-        public List<T> Query<T>(string query,params AdoDotNetParameter[]? parameters) 
+        public List<T> Query<T>(string query, params AdoDotNetParameter[]? parameters)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
             connection.Open();
             SqlCommand cmd = new SqlCommand(query, connection);
-            if (parameters is not null && parameters.Length > 0 ) 
+            if (parameters is not null && parameters.Length > 0)
             {
                 foreach (var item in parameters)
                 {

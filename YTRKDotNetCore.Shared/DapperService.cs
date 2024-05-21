@@ -8,7 +8,7 @@ namespace YTRKDotNetCore.Shared
     {
         private readonly string _connectionString;
 
-        public DapperService (string connectionString)
+        public DapperService(string connectionString)
         {
             _connectionString = connectionString;
         }
@@ -16,7 +16,7 @@ namespace YTRKDotNetCore.Shared
         public List<M> Query<M>(string query, object? param = null)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-            var lst = db.Query<M>(query,param).ToList();
+            var lst = db.Query<M>(query, param).ToList();
             return lst;
         }
         public M QueryFirstOrDefault<M>(string query, object? param = null)
@@ -29,7 +29,7 @@ namespace YTRKDotNetCore.Shared
         public int Execute(string query, object? param = null)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-           var result = db.Execute(query,param);
+            var result = db.Execute(query, param);
             return result;
         }
 

@@ -46,7 +46,7 @@ namespace YTRKDotNetCore.RestApi.Controllers
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
-            
+
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             var result = db.Execute(query, blog);
 
@@ -56,9 +56,9 @@ namespace YTRKDotNetCore.RestApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateBlog(int id , BlogModel blog) 
+        public IActionResult UpdateBlog(int id, BlogModel blog)
         {
-           var item = FindById(id);
+            var item = FindById(id);
 
             if (item == null)
             {
@@ -78,7 +78,7 @@ namespace YTRKDotNetCore.RestApi.Controllers
         }
 
         [HttpPatch("{id}")]
-        public IActionResult PatchBlog(int id, BlogModel blog) 
+        public IActionResult PatchBlog(int id, BlogModel blog)
         {
             var item = FindById(id);
 
@@ -87,22 +87,22 @@ namespace YTRKDotNetCore.RestApi.Controllers
                 return NotFound("No Data Fount");
             }
 
-            string  conditions = string.Empty;
+            string conditions = string.Empty;
 
-            if(!String.IsNullOrEmpty(blog.BlogTitle))
+            if (!String.IsNullOrEmpty(blog.BlogTitle))
             {
                 conditions += " [BlogTitle] = @BlogTitle, ";
-            }   
-            if(!String.IsNullOrEmpty(blog.BlogAuthor))
+            }
+            if (!String.IsNullOrEmpty(blog.BlogAuthor))
             {
                 conditions += " [BlogAuthor] = @BlogAuthor, ";
-            }   
-            if(!String.IsNullOrEmpty(blog.BlogContent))
+            }
+            if (!String.IsNullOrEmpty(blog.BlogContent))
             {
                 conditions += "[BlogContent] = @BlogContent, ";
-            }      
+            }
 
-            if(conditions.Length == 0)
+            if (conditions.Length == 0)
             {
                 return NotFound("No data to update");
             }
@@ -121,7 +121,7 @@ namespace YTRKDotNetCore.RestApi.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteBlog(int id) 
+        public IActionResult DeleteBlog(int id)
         {
             var item = FindById(id);
             if (item == null)

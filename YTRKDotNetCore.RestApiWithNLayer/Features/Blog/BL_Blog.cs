@@ -37,7 +37,7 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Blog
             return result;
 
         }
-        
+
         public int PatchBlod(int id, BlogModel requestModel)
         {
 

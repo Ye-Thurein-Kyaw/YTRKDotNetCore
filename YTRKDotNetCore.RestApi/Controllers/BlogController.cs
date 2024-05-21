@@ -5,8 +5,8 @@ using YTRKDotNetCore.RestApi.Database;
 using YTRKDotNetCore.RestApi.Models;
 
 namespace YTRKDotNetCore.RestApi.Controllers
-{ 
-    
+{
+
     [Route("api/[controller]")]
     [ApiController]
     public class BlogController : ControllerBase
@@ -48,7 +48,7 @@ namespace YTRKDotNetCore.RestApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id,BlogModel blog)
+        public IActionResult Update(int id, BlogModel blog)
         {
             var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
 
@@ -74,12 +74,12 @@ namespace YTRKDotNetCore.RestApi.Controllers
                 return NotFound("No Data Fount");
             }
 
-            if(!string .IsNullOrEmpty(blog.BlogTitle)) 
+            if (!string.IsNullOrEmpty(blog.BlogTitle))
             {
-                item.BlogTitle = blog.BlogTitle; 
+                item.BlogTitle = blog.BlogTitle;
             }
 
-            if (!string .IsNullOrEmpty(blog.BlogAuthor))
+            if (!string.IsNullOrEmpty(blog.BlogAuthor))
             {
 
                 item.BlogAuthor = blog.BlogAuthor;

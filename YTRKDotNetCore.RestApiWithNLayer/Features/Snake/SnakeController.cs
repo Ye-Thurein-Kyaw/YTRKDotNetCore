@@ -28,7 +28,8 @@ namespace YTRKDotNetCore.RestApiWithNLayer.Features.Snake
         {
             var model = await GetDataAsync();
             var result = model.FirstOrDefault(x => x.Id == id);
-            if (result == null) {
+            if (result == null)
+            {
                 return NotFound("No data fount");
             }
             return Ok(result);

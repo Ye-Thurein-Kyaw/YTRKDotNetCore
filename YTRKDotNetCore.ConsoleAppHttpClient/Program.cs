@@ -20,11 +20,11 @@ Console.ReadLine();
 
 static string ToNumber(string num)
 {
-    num = num.Replace("၁","1")း;
-    num = num.Replace("၂","2")း;
-    num = num.Replace("၃","3")း;
-    num = num.Replace("၄","4")း;
-    num = num.Replace("၅","5")း;
+    num = num.Replace("၁", "1")း;
+    num = num.Replace("၂", "2")း;
+    num = num.Replace("၃", "3")း;
+    num = num.Replace("၄", "4")း;
+    num = num.Replace("၅", "5")း;
 
     return num;
 }
