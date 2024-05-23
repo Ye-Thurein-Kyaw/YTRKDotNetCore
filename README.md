@@ -8,6 +8,8 @@ EFCore မှာ Code first and Database First ဆိုပီး ရှိတ�
 Code First ဆိုတာက code ကနေ ရေးလိုက်တာနဲ့ database မှာ table ဆောက်တာ  
 Database First ဆိုတာက ရှိပီးသား database က ဟာကို C# မှာ ပြန်ယူသုံးတာ
 
+** pj တစ်ခုဆောက်မယ်ဆိုရင် လိုအပ်တဲ့ package သွင်း။ Connection String ထည့်။ DB ကိုလဲ ထည့်ရမယ်
+
 
 https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx
 above link is to read about Scaffold-DbContext Command
