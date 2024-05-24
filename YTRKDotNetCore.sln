@@ -22,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.ConsoleAppHt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.ConsoleAppRestClientExamples", "YTRKDotNetCore.ConsoleAppRestClientExamples\YTRKDotNetCore.ConsoleAppRestClientExamples.csproj", "{4A6F2BA1-2F71-41E9-8B4F-F6CD7409D5E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.PizzaApi", "YTRKDotNetCore.PizzaApi\YTRKDotNetCore.PizzaApi.csproj", "{AB6B0E68-C8CB-4C08-B746-0A18A5387808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.PizzaApi", "YTRKDotNetCore.PizzaApi\YTRKDotNetCore.PizzaApi.csproj", "{AB6B0E68-C8CB-4C08-B746-0A18A5387808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.ConsoleAppRefitExamples", "YTRKDotNetCore.ConsoleAppRefitExamples\YTRKDotNetCore.ConsoleAppRefitExamples.csproj", "{79999018-00FB-455C-A5FA-54249211D95D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{AB6B0E68-C8CB-4C08-B746-0A18A5387808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB6B0E68-C8CB-4C08-B746-0A18A5387808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB6B0E68-C8CB-4C08-B746-0A18A5387808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79999018-00FB-455C-A5FA-54249211D95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79999018-00FB-455C-A5FA-54249211D95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79999018-00FB-455C-A5FA-54249211D95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79999018-00FB-455C-A5FA-54249211D95D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

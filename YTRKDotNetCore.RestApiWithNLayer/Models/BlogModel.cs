@@ -1,7 +1,6 @@
 ﻿namespace YTRKDotNetCore.RestApiWithNLayer.Models;
 
 [Table("Tbl_Blog")]
-
 public class BlogModel
 {
     [Key]
