@@ -89,6 +89,7 @@
             colEdit.Name = "colEdit";
             colEdit.ReadOnly = true;
             colEdit.Text = "Edit";
+            colEdit.UseColumnTextForButtonValue = true;
             // 
             // colDelete
             // 
@@ -96,6 +97,7 @@
             colDelete.Name = "colDelete";
             colDelete.ReadOnly = true;
             colDelete.Text = "Delete";
+            colDelete.UseColumnTextForButtonValue = true;
             // 
             // FrmBlogList
             // 

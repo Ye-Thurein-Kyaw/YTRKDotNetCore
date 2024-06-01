@@ -36,6 +36,7 @@
             label3 = new Label();
             saveBtn = new Button();
             cancelBtn = new Button();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
             // txtAuthor
@@ -99,7 +100,7 @@
             saveBtn.Name = "saveBtn";
             saveBtn.Size = new Size(86, 33);
             saveBtn.TabIndex = 7;
-            saveBtn.Text = "Save";
+            saveBtn.Text = "&Save";
             saveBtn.UseVisualStyleBackColor = false;
             saveBtn.Click += saveBtn_Click;
             // 
@@ -113,15 +114,31 @@
             cancelBtn.Name = "cancelBtn";
             cancelBtn.Size = new Size(86, 33);
             cancelBtn.TabIndex = 8;
-            cancelBtn.Text = "Cancel";
+            cancelBtn.Text = "&Cancel";
             cancelBtn.UseVisualStyleBackColor = false;
             cancelBtn.Click += cancelBtn_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.DeepSkyBlue;
+            btnUpdate.FlatAppearance.BorderSize = 0;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(207, 253);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(86, 33);
+            btnUpdate.TabIndex = 9;
+            btnUpdate.Text = "&Update";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Visible = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // FrmBlog
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 510);
+            Controls.Add(btnUpdate);
             Controls.Add(cancelBtn);
             Controls.Add(saveBtn);
             Controls.Add(label3);
@@ -148,5 +165,6 @@
         private Label label3;
         private Button saveBtn;
         private Button cancelBtn;
+        private Button btnUpdate;
     }
 }

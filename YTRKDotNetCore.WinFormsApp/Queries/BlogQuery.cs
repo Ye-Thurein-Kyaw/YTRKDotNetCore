@@ -22,5 +22,15 @@ namespace YTRKDotNetCore.WinFormsApp.Queries
       ,[BlogAuthor]
       ,[BlogContent]
   FROM [dbo].[Tbl_Blog]";
+
+        public static string BlogDelete { get; } = @"DELETE [dbo].[Tbl_Blog] WHERE BlogId = @BlogId";
+
+        public static string GetBlog { get; } = @"select * from tbl_blog where blogid = @BlogId";
+
+        public static string UpdateBlog { get; } = @"UPDATE [dbo].[Tbl_Blog]
+   SET [BlogTitle] = @BlogTitle
+      ,[BlogAuthor] = @BlogAuthor
+      ,[BlogContent] = @BlogContent
+ WHERE BlogId = @BlogId";
     }
 }
