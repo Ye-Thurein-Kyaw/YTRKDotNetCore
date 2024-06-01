@@ -30,20 +30,6 @@ namespace YTRKDotNetCore.WinFormsApp
             btnUpdate.Visible = true;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmBlog_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void saveBtn_Click(object sender, EventArgs e)
         {
             try

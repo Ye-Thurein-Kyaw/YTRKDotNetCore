@@ -45,6 +45,8 @@ namespace YTRKDotNetCore.WinFormsApp
 
             if (e.RowIndex == -1) return;
 
+            #region If Case
+
             var blogId = Convert.ToInt32(dgvData.Rows[e.RowIndex].Cells["colId"].Value);
 
             if (e.ColumnIndex == (int)EnumFormControlType.Edit)
@@ -56,20 +58,42 @@ namespace YTRKDotNetCore.WinFormsApp
             }
             else if (e.ColumnIndex == (int)EnumFormControlType.Delete)
             {
-                var dialogResult = MessageBox.Show("Are you sure want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult != DialogResult.Yes) return;
-
-                DeleteBlog(blogId);
+                
             }
 
+            #endregion
+
+            //#region Switch Case
+
+            //int index = e.RowIndex;
+            //EnumFormControlType enumFormControlType = (EnumFormControlType)index;
+
+            //switch (enumFormControlType)
+            //{
+
+            //    case EnumFormControlType.Edit:
+            //        FrmBlog frm = new FrmBlog(blogId);
+            //        frm.ShowDialog();
+
+            //        BlogList();
+            //        break;
+            //    case EnumFormControlType.Delete:
+            //        var dialogResult = MessageBox.Show("Are you sure want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //        if (dialogResult != DialogResult.Yes) return;
+
+            //        DeleteBlog(blogId);
+            //        break;
+            //    case EnumFormControlType.None:
+            //    default:
+            //        MessageBox.Show("Invalid case");
+            //        break;
+            //}
+
+            //#endregion
 
 
         }
 
-        private void EditBlog(int blogId, BlogModel model)
-        {
-
-        }
 
         private void DeleteBlog(int id)
         {

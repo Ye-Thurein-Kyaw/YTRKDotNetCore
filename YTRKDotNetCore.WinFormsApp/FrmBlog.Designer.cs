@@ -69,7 +69,6 @@
             label1.Size = new Size(41, 19);
             label1.TabIndex = 4;
             label1.Text = "Title :";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -88,7 +87,6 @@
             label3.Size = new Size(66, 19);
             label3.TabIndex = 6;
             label3.Text = "Content :";
-            label3.Click += label3_Click;
             // 
             // saveBtn
             // 
@@ -151,7 +149,6 @@
             Name = "FrmBlog";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Blog";
-            Load += FrmBlog_Load;
             ResumeLayout(false);
             PerformLayout();
         }

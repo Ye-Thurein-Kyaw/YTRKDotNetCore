@@ -26,7 +26,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.PizzaApi", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.ConsoleAppRefitExamples", "YTRKDotNetCore.ConsoleAppRefitExamples\YTRKDotNetCore.ConsoleAppRefitExamples.csproj", "{79999018-00FB-455C-A5FA-54249211D95D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.WinFormsApp", "YTRKDotNetCore.WinFormsApp\YTRKDotNetCore.WinFormsApp.csproj", "{B02F376F-AADE-4D00-BF21-AF1FFEF5AB07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.WinFormsApp", "YTRKDotNetCore.WinFormsApp\YTRKDotNetCore.WinFormsApp.csproj", "{B02F376F-AADE-4D00-BF21-AF1FFEF5AB07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.WinformsAppSqlInjection", "YTRKDotNetCore.WinformsAppSqlInjection\YTRKDotNetCore.WinformsAppSqlInjection.csproj", "{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{B02F376F-AADE-4D00-BF21-AF1FFEF5AB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B02F376F-AADE-4D00-BF21-AF1FFEF5AB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B02F376F-AADE-4D00-BF21-AF1FFEF5AB07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
