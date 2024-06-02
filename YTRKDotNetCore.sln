@@ -28,7 +28,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.ConsoleAppRe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.WinFormsApp", "YTRKDotNetCore.WinFormsApp\YTRKDotNetCore.WinFormsApp.csproj", "{B02F376F-AADE-4D00-BF21-AF1FFEF5AB07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.WinformsAppSqlInjection", "YTRKDotNetCore.WinformsAppSqlInjection\YTRKDotNetCore.WinformsAppSqlInjection.csproj", "{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTRKDotNetCore.WinformsAppSqlInjection", "YTRKDotNetCore.WinformsAppSqlInjection\YTRKDotNetCore.WinformsAppSqlInjection.csproj", "{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.NLayer.UI", "YTRKDotNetCore.NLayer.UI\YTRKDotNetCore.NLayer.UI.csproj", "{39475C0E-E1F4-418F-8F2B-E18A757828D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.NLayer.BusinessLogic", "YTRKDotNetCore.NLayer.BusinessLogic\YTRKDotNetCore.NLayer.BusinessLogic.csproj", "{2C2D0882-8E51-436A-8DAF-EA1A8DAAC213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTRKDotNetCore.NLayer.DataAccess", "YTRKDotNetCore.NLayer.DataAccess\YTRKDotNetCore.NLayer.DataAccess.csproj", "{14489286-0727-4167-8152-B4D3EB0D8AF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +86,18 @@ Global
 		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{263C2A06-AD74-4EEC-B83E-F4614A6B48F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39475C0E-E1F4-418F-8F2B-E18A757828D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39475C0E-E1F4-418F-8F2B-E18A757828D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39475C0E-E1F4-418F-8F2B-E18A757828D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39475C0E-E1F4-418F-8F2B-E18A757828D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2D0882-8E51-436A-8DAF-EA1A8DAAC213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2D0882-8E51-436A-8DAF-EA1A8DAAC213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2D0882-8E51-436A-8DAF-EA1A8DAAC213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2D0882-8E51-436A-8DAF-EA1A8DAAC213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14489286-0727-4167-8152-B4D3EB0D8AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14489286-0727-4167-8152-B4D3EB0D8AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14489286-0727-4167-8152-B4D3EB0D8AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14489286-0727-4167-8152-B4D3EB0D8AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
