@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      successMessage("This is a success message");
+      //   errorMessage("This is an error message");
+
+      function errorMessage(message) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: message,
+        });
+      }
+
+      function successMessage(message) {
+        Swal.fire({
+          icon: "success",
+          title: "Good job!",
+          text: message,
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -5,7 +5,7 @@ getBlogTable();
 
 // createBlog();
 // updateBlog("dcec69f8-ec35-4828-aabe-b607d9f7f777","adfadfadfa","afasadsfasfq34frdsf","afasdfew");
-deleteBlog("8a3b9dda-d63b-4051-b95f-e370d3062e3a");
+// deleteBlog("8a3b9dda-d63b-4051-b95f-e370d3062e3a");
 
 function readBlog() {
   let lst = getBlogs();
@@ -78,25 +78,25 @@ function updateBlog(id, title, author, content) {
   successMessage("Updating Success");
 }
 
-function deleteBlog(id) {
-let result = confirm("are you sure want to delete?");
-if(!result) return
+// function deleteBlog(id) {
+//   let result = confirm("are you sure want to delete?");
+//   if (!result) return;
 
-  let lst = getBlogs();
+//   let lst = getBlogs();
 
-  const items = lst.filter((x) => x.id === id);
-  if (items.length == 0) {
-    console.log("No Data Fount");
-    return;
-  }
+//   const items = lst.filter((x) => x.id === id);
+//   if (items.length == 0) {
+//     console.log("No Data Fount");
+//     return;
+//   }
 
-  lst = lst.filter((x) => x.id !== id);
-  const jsonBlog = JSON.stringify(lst);
-  localStorage.setItem(tblBlog, jsonBlog);
+//   lst = lst.filter((x) => x.id !== id);
+//   const jsonBlog = JSON.stringify(lst);
+//   localStorage.setItem(tblBlog, jsonBlog);
 
-  successMessage("Delete SuccessFull!");
-  getBlogTable();
-}
+//   successMessage("Delete SuccessFull!");
+//   getBlogTable();
+// }
 
 function uuidv4() {
   return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) =>
@@ -134,12 +134,68 @@ $("#btnSave").click(function () {
   getBlogTable();
 });
 
+function confirmDeleteBox(id) {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger",
+    },
+    buttonsStyling: false,
+  });
+  swalWithBootstrapButtons
+    .fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, cancel!",
+      reverseButtons: true,
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        let lst = getBlogs();
+
+        const items = lst.filter((x) => x.id === id);
+        if (items.length == 0) {
+          console.log("No Data Fount");
+          return;
+        }
+
+        lst = lst.filter((x) => x.id !== id);
+        const jsonBlog = JSON.stringify(lst);
+        localStorage.setItem(tblBlog, jsonBlog);
+        
+        swalWithBootstrapButtons.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+        getBlogTable();
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        swalWithBootstrapButtons.fire({
+          title: "Cancelled",
+          text: "Your imaginary file is safe :)",
+          icon: "error",
+        });
+      }
+    });
+}
+
 function successMessage(message) {
-  alert(message);
+  Swal.fire({
+    icon: "success",
+    title: "Good job!",
+    text: message,
+  });
 }
 
 function errorMessage(message) {
-  alert(message);
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: message,
+  });
 }
 
 function clearControls() {
@@ -165,7 +221,7 @@ function getBlogTable() {
         <button type="button" class= "btn btn-warning" id="btnSave" onclick = "editBlog('${
           item.id
         }')">Edit</button>
-        <button type="button" class= "btn btn-danger" id="btnSave" onclick = "deleteBlog('${
+        <button type="button" class= "btn btn-danger" id="btnSave" onclick = "confirmDeleteBox('${
           item.id
         }')">Delete</button>
     </td>
